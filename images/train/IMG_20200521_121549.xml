@@ -1,0 +1,26 @@
+<annotation>
+	<folder>20200521</folder>
+	<filename>IMG_20200521_121549.jpg</filename>
+	<path>/home/zb/works/test/tldata2/20200521/IMG_20200521_121549.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>3840</width>
+		<height>5120</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>green</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>2334</xmin>
+			<ymin>1368</ymin>
+			<xmax>2452</xmax>
+			<ymax>1627</ymax>
+		</bndbox>
+	</object>
+</annotation>
