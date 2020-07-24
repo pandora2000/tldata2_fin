@@ -1,0 +1,26 @@
+<annotation>
+	<folder>20200702</folder>
+	<filename>2020-07-04-05-01-31-370.jpg</filename>
+	<path>/home/zb/works/test/tldata2/20200702/2020-07-04-05-01-31-370.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1080</width>
+		<height>1920</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>red</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>684</xmin>
+			<ymin>795</ymin>
+			<xmax>711</xmax>
+			<ymax>848</ymax>
+		</bndbox>
+	</object>
+</annotation>
