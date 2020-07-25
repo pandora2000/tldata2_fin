@@ -29,11 +29,12 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
+    print('class_text_to_int')
+    print(row_label)
+    print(row_label == 'red')
     if row_label == 'red':
-    # if row_label == 'tommad':
         return 1
     elif row_label == 'green':
-    # elif row_label == 'kk':
         return 2
     else:
         None
