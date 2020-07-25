@@ -5,7 +5,7 @@ def chunks(lst, n):
         yield lst[i:i + n]
 dpath = os.path.dirname(os.path.realpath(__file__))
 paths = [f'images/train/{p}' for p in os.listdir(f'{dpath}/images/train')] + [f'images/test/{p}' for p in os.listdir(f'{dpath}/images/test')]
-cs = chunks(paths, 500)
+cs = [x for x in chunks(paths, 500)]
 for i, c in enumerate(cs):
     com = ' '.join([f"'{x}'" for x in c])
     print(f'{i + 1} / {len(cs)}')
