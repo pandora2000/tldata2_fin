@@ -61,8 +61,10 @@ def create_tf_example(group, path):
     classes_text = []
     classes = []
 
+    print('fdafweeg')
     for index, row in group.object.iterrows():
         print(row)
+        print(row['class'])
         xmins.append(row['xmin'] / width)
         xmaxs.append(row['xmax'] / width)
         ymins.append(row['ymin'] / height)
