@@ -29,17 +29,22 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    print('class_text_to_int')
-    print(row_label)
-    print(row_label[-1])
-    print(bytearray(row_label, 'utf-8'))
-    print(str(row_label).strip() == 'red')
-    print(str(row_label).strip() == 'red')
-    print(str(row_label).strip() == 'green')
-    print(type(row_label))
-    if row_label == 'red':
+    # print('class_text_to_int')
+    # print(row_label)
+    # print(row_label[-1])
+    # print(bytearray(row_label, 'utf-8'))
+    # print(str(row_label).strip() == 'red')
+    # print(str(row_label).strip() == 'red')
+    # print(str(row_label).strip() == 'green')
+    # print(type(row_label))
+    # if row_label == 'red':
+    #     return 1
+    # elif row_label == 'green':
+    #     return 2
+    # bomマークが最初の文字に入る
+    if row_label[-1] == 'd':
         return 1
-    elif row_label == 'green':
+    elif row_label[-1] == 'n':
         return 2
     else:
         None
@@ -67,19 +72,19 @@ def create_tf_example(group, path):
     classes_text = []
     classes = []
 
-    print('fdafweeg')
+    # print('fdafweeg')
     for index, row in group.object.iterrows():
-        print(row)
-        print(row['class'])
+        # print(row)
+        # print(row['class'])
         xmins.append(row['xmin'] / width)
         xmaxs.append(row['xmax'] / width)
         ymins.append(row['ymin'] / height)
         ymaxs.append(row['ymax'] / height)
         classes_text.append(row['class'].encode('utf8'))
         classes.append(class_text_to_int(row['class']))
-    print(path)
-    print(group)
-    print(classes)
+    # print(path)
+    # print(group)
+    # print(classes)
 
     tf_example = tf.train.Example(features=tf.train.Features(feature={
         'image/height': dataset_util.int64_feature(height),
