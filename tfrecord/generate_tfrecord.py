@@ -30,10 +30,10 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    print('class_text_to_int')
+    # print('class_text_to_int')
     # print(row_label)
     # print(row_label[-1])
-    print(bytes(row_label, 'utf-8'))
+    # print(bytes(row_label, 'utf-8'))
     # print(str(row_label).strip() == 'red')
     # print(str(row_label).strip() == 'red')
     # print(str(row_label).strip() == 'green')
