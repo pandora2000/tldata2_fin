@@ -13,6 +13,7 @@ from __future__ import absolute_import
 
 import os
 import io
+import codecs
 import pandas as pd
 import tensorflow as tf
 
@@ -29,10 +30,10 @@ FLAGS = flags.FLAGS
 
 # TO-DO replace this with label map
 def class_text_to_int(row_label):
-    # print('class_text_to_int')
+    print('class_text_to_int')
     # print(row_label)
     # print(row_label[-1])
-    # print(bytearray(row_label, 'utf-8'))
+    print(bytearray(row_label, 'utf-8'))
     # print(str(row_label).strip() == 'red')
     # print(str(row_label).strip() == 'red')
     # print(str(row_label).strip() == 'green')
@@ -42,9 +43,9 @@ def class_text_to_int(row_label):
     # elif row_label == 'green':
     #     return 2
     # bomマークが最初の文字に入る
-    if row_label[-1] == 'd':
+    if row_label == 'red':
         return 1
-    elif row_label[-1] == 'n':
+    elif row_label == 'green':
         return 2
     else:
         None
@@ -76,6 +77,7 @@ def create_tf_example(group, path):
     for index, row in group.object.iterrows():
         # print(row)
         # print(row['class'])
+        # klass = row['class'].replace(codecs.
         xmins.append(row['xmin'] / width)
         xmaxs.append(row['xmax'] / width)
         ymins.append(row['ymin'] / height)
