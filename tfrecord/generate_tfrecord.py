@@ -31,7 +31,7 @@ FLAGS = flags.FLAGS
 def class_text_to_int(row_label):
     print('class_text_to_int')
     print(row_label)
-    print(row_label.strip() == 'red')
+    print(str(row_label).strip() == 'red')
     if row_label == 'red':
         return 1
     elif row_label.strip() == 'green':
